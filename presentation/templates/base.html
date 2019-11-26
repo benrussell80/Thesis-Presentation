@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thesis Presentation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm justify-content-between red">
+      <img class="navbar-brand align-self-center" src="{{ url_for('static', filename='UA_Logo.png') }}" height="100"
+        alt="">
+      <h1 class="text-light">{{ slide_title }}</h1>
+      <h3 class="text-light">{% if slide_number != 0 %}{{ slide_number }}{% endif %}</h3>
+    </nav>
+  </header>
+  <div class="container-fluid h-100 beige">
+    {% block content %}
+    <div class="row red">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link text-light bg-dark"
+              href="{{ url_for('slides.slide_number', number=[slide_number-1, 0] | max) }}">Previous</a> </li>
+              <li class="page-item">
+            <a class="page-link text-light bg-dark"
+              href="{{ url_for('slides.slide_number', number=[slide_number+1, number_of_slides] | min) }}">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    {% endblock content %}
+  </div>
+</body>
+
+</html>

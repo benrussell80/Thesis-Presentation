@@ -1,0 +1,31 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = '<i>E. coli</i> as a Model Organism'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 10%;">
+    <li>
+        <h3><i>E. coli</i> are among the most well-studied bacterial strains.</h3>
+    </li>
+    <li>
+        <h3>Previous research has shown antibacterial effects of silver ions and nanoparticles against <i>E. coli</i>.</h3>
+        <ul>
+            <li>Suppressed growth</li>
+            <li>Condensation of DNA</li>
+            <li>Length oscillations</li>
+        </ul>
+    </li>
+    <li>
+        <h3>Some interactions remain unexplored.</h3>
+    </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+    <img class="img-fluid" style="margin-top: 5%; width: 80%; height: auto;" src="{{ url_for('static', filename='suppress_growth.png') }}" alt="...">
+    <img class="img-fluid" style="margin-top: 5%; width: 80%; height: auto;" src="{{ url_for('static', filename='reorganizations.png') }}" alt="...">
+    <img class="img-fluid" style="margin-top: 5%; width: 80%; height: auto;" src="{{ url_for('static', filename='length_oscillations.png') }}" alt="...">
+</div>
+{% endblock right %}

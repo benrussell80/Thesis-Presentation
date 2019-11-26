@@ -1,0 +1,27 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'The Hidden Markov Model'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 10%;">
+    <li>
+        <h3>State of Markov process is dependent on only the most previous state.</h3>
+    </li>
+    <li>
+        <h3>In a hidden Markov model, the states are not directly observable.</h3>
+    </li>
+    <li>
+        <h3>The hidden states emit the values of observables based on some distribution.</h3>
+    </li>
+    <li>
+        <h3>These observables can be used to predict the most likely sequence of hidden states using the Viterbi algorithm.</h3>
+    </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+    <img class="img-fluid" style="margin-top: 10%; width: 80%; height: auto;" src="{{ url_for('static', filename='transmat-graph-2-1.png') }}" alt="...">
+</div>
+{% endblock right %}

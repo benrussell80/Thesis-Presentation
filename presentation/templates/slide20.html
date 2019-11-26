@@ -1,0 +1,19 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Swimming Assay - Results'|safe %}
+
+{% block left %}
+<div style="margin-top: 10%;" class="text-center">
+  <h3>Control</h3>
+  <img class="img-fluid" width="50%" src="{{ url_for('static', filename='0uM_Ag.gif') }}"
+    alt="...">
+</div>
+{% endblock left %}
+
+{% block right %}
+<div style="margin-top: 10%;" class="text-center">
+  <h3>1 hour after 40&mu;M Ag<sup>+</sup></h3>
+  <img class="img-fluid" width="50%" src="{{ url_for('static', filename='40uM_Ag.gif') }}"
+    alt="...">
+</div>
+{% endblock right %}

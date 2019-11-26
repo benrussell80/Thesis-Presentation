@@ -1,0 +1,21 @@
+{% extends 'center.html' %}
+
+{% set slide_title = 'Summary of Findings'|safe %}
+
+{% block center %}
+<div class="d-flex flex-column text-center h-100">
+  <h3 style="margin-top: 5%; margin-bottom: 2.5%">
+    Silver ions slowed <i>E. coli</i> cells, and caused their trajectories to be more curved.
+  </h3>
+  <hr>
+  <h3 style="margin-top: 2.5%; margin-bottom: 2.5%">
+    This changed behavior is likely explained by the stalling of the bacterial motor as seen from the hidden Markov modeling.
+  </h3>
+  <hr>
+  <h3 style="margin-top: 2.5%; margin-bottom: 2.5%">
+    These effects are likely not due to cell death as the population of cells retained superdiffusivity, and PI staining results
+    were similar to the controls.
+  </h3>
+</div>
+
+{% endblock center %}

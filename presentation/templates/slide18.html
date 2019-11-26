@@ -1,0 +1,27 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Tethering Assay - The Gaussian Hidden Markov Model'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 10%;">
+    <li>
+        <h3>In this work, HMMs with Gaussian emissions were used to model the switching behavior of the flagellar motor.</h3>
+    </li>
+    <li>
+        <h3>Rather than multinomial emissions, the emissions can have a range of continuous values (and can overlap).</h3>
+    </li>
+    <li>
+        <h3>The rotational velocity was used as the observable and run or tumble as the hidden state.</h3>
+    </li>
+    <li>
+        <h3>HMMs were fit to the pre-silver data and used to predict the states of the post-silver data.</h3>
+    </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+    <img class="img-fluid" style="margin-top: 10%; width: 80%; height: auto;" src="{{ url_for('static', filename='gaussian_emissions.png') }}" alt="...">
+</div>
+{% endblock right %}

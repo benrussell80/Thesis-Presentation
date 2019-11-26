@@ -1,0 +1,27 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Pathogenic <i>Escherichia coli</i>'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 10%;">
+    <li>
+        <h3><i>E. coli</i> are among the most common bacterial infections.</h3>
+    </li>
+    <li>
+        <h3>CDC has reported 5 separate outbreaks of Shiga-toxin producing <i>E. coli</i> in last 3 years.</h3>
+    </li>
+    <li>
+        <h3>Antibiotic-resistant Enterobacteriaceae are a serious threat, according to CDC.</h3>
+    </li>
+    <li>
+        <h3>Can cause severe symptoms in the young and elderly, sometimes leading to death.</h3>
+    </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+<img class="img-fluid" style="margin-top: 10%; width: 80%; height: auto;" src="{{ url_for('static', filename='cdc_enterobacteriaceae.png') }}" alt="...">
+</div>
+{% endblock right %}

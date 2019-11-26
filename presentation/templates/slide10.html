@@ -1,0 +1,30 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Methods - Bacterial Strain and Growth'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 10%;">
+    <li>
+        <h3><i>E. coli</i> Strain: K12-&Delta;<i>hns</i> pHNS-mEos3.2c1</h3>
+    </li>
+    <li>
+        <h3>Grown overnight in Luria Broth (LB) at 37&deg;C, 250RPM in a shaking incubator</h3>
+    </li>
+    <li>
+        <h3>Diluted 5000:1 the next day and regrown at 32&deg;C, 250RPM</h3>
+    </li>
+    <li>
+        <h3>Regrown to OD<sub>600</sub>=0.3, after which time silver nitrate was added to the liquid culture.</h3>
+    </li>
+    <li>
+        <h3>Samples were then imaged.</h3>
+    </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+<img class="img-fluid" style="margin-top: 5%; width: 50%; height: auto;" src="{{ url_for('static', filename='culture_tubes.jpg') }}" alt="...">
+</div>
+{% endblock right %}

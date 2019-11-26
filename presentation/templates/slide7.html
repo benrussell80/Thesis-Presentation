@@ -1,0 +1,28 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = '<i>E. coli</i> as a Model Organism'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 10%;">
+    <li>
+        <h3>Motility of <i>E. coli</i> has been thoroughly studied.</h3>
+    </li>
+    <li>
+        <h3>Swim by rotating helical flagella connected to an internal motor.</h3>
+    </li>
+    <li>
+        <h3>Able to detect gradients and reorient themselves in favorable directions.</h3>
+    </li>
+    <li>
+        <h3>Important for cell survivability and virulence.</h3>
+    </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+<img class="img-fluid" style="margin-top: 5%; width: 80%; height: auto;" src="{{ url_for('static', filename='chemotaxis.jpg') }}" alt="...">
+<img class="img-fluid" style="margin-top: 5%; width: 40%; height: auto;" src="{{ url_for('static', filename='motor.gif') }}" alt="...">
+</div>
+{% endblock right %}

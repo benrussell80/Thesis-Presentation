@@ -1,0 +1,24 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Swimming Assay - Selected Track Chord-Arc Ratios'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 10%;">
+    <li>
+        <h3>Chord-arc ratio (CAR) is the ratio between the maximum distance between any two points on a trajectory and the total path length.</h3>
+    </li>
+    <li>
+        <h3>This metric is independent of velocity. Gives a measure of tortuosity.</h3>
+    </li>
+    <li>
+        <h3>Trajectories become more curved, implying that the cells are tumbling more frequently.</h3>
+    </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+    <img class="img-fluid" style="margin-top: 10%; width: 100%; height: auto;" src="{{ url_for('static', filename='CAR_grid_plot-1.png') }}" alt="...">
+</div>
+{% endblock right %}

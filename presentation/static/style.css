@@ -1,0 +1,25 @@
+.red {
+    background-color: crimson;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.beige {
+    background-color: beige;
+}
+
+html,
+body {
+    height: calc(100vh - 154px);
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color: gray;
+    height: 1px;
+  }
