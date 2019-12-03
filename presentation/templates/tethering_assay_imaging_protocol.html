@@ -1,0 +1,25 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Tethering Assay - Imaging Protocol'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+  <li>
+    <h3>Cell was stuck to glass coverslip using an antibody.</h3>
+  </li>
+  <li>
+    <h3>Translational motion became rotational motion.</h3>
+  </li>
+  <li>
+    <h3>Movies were taken before and after adding 40&mu;M Ag<sup>+</sup>.</h3>
+  </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+  <img class="img-fluid" style="margin-top: 5%; width: 100%; height: auto;"
+    src="{{ url_for('static', filename='tethered_cell.png') }}" alt="...">
+</div>
+{% endblock right %}

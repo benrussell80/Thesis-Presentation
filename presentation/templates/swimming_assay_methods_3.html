@@ -1,0 +1,28 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Swimming Assay - Methods' | safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+  <li>
+    <h3><i>E. coli</i> Strain: K12</h3>
+  </li>
+  <li>
+    <h3>Grown to optimal conditions in rich media.</h3>
+  </li>
+  <li>
+    <h3>Treated with either 0, 30, or 40&mu;M Ag<sup>+</sup></h3>
+  </li>
+  <li>
+    <h3>Cells were then imaged every few hours while freely swimming.</h3>
+  </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+  <img class="img-fluid" style="margin-top: 5%; width: 45%; height: auto;"
+    src="{{ url_for('static', filename='microscope.jpg') }}" alt="...">
+</div>
+{% endblock right %}

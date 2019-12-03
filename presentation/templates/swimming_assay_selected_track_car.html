@@ -1,0 +1,27 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Swimming Assay - Selected Track Chord-Arc Ratios'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+    <li>
+        <h3>Distribution of CARs shifts toward 0 after Ag<sup>+</sup>.</h3>
+    </li>
+    <li>
+        <h3>Steadily becomes similar to control with time.</h3>
+    </li>
+    <li>
+        <h3>High area under curve corresponds to high tumbling rate.</h3>
+    </li>
+    <li>
+        <h3>Result is independent of velocity.</h3>
+    </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+    <img class="img-fluid" style="margin-top: 10%; width: 100%; height: auto;" src="{{ url_for('static', filename='CAR_grid_plot-1.png') }}" alt="...">
+</div>
+{% endblock right %}

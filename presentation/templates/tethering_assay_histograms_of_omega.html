@@ -1,0 +1,25 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Tethering Assay - Histograms of &omega;'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+	<li>
+		<h3>Histogram of &omega; for the same two cells.</h3>
+	</li>
+	<li>
+		<h3>Both cells show bimodality, corresponding to running and tumbling.</h3>
+	</li>
+	<li>
+		<h3>After silver, the cell mostly retains its tumbling state.</h3>
+	</li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+	<img class="img-fluid" style="margin-top: 5%; width: 70%; height: auto;"
+		src="{{ url_for('static', filename='omega_hists-1.png') }}" alt="...">
+</div>
+{% endblock right %}

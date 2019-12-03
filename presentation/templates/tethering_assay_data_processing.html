@@ -1,0 +1,36 @@
+{% extends 'left_right_66.html' %}
+
+{% set slide_title = 'Tethering Assay - Data Processing'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 10%;">
+  <li>
+    <h3>Resulting movies were processed:</h3>
+    <ul>
+      <li>
+        <h3>Inverted</h3>
+      </li>
+      <li>
+        <h3>Gaussian blurred</h3>
+      </li>
+      <li>
+        <h3>Thresheld to make binary mask</h3>
+      </li>
+      <li>
+        <h3>Primary axis and orientation angle (&theta;) found</h3>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3>Orientation angle was then used to find rotational velocity (&omega;)</h3>
+  </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+  <img class="img-fluid" style="margin-top: 15%; width: 55%; height: auto;"
+    src="{{ url_for('static', filename='tethering_assay_data_processing.gif') }}" alt="...">
+</div>
+{% endblock right %}

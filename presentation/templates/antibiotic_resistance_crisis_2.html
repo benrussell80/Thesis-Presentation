@@ -1,0 +1,34 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'The Antibiotic Resistance Crisis - Resistance' %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+  <li>
+    <h3>Antibiotics select for resistance bacteria.</h3>
+  </li>
+  <li>
+    <h3>Overuse and misuse.</h3>
+  </li>
+  <li>
+    <h3>Infections are more difficult to treat.</h3>
+  </li>
+  <li>
+    <h3>Fewer new drugs available.</h3>
+  </li>
+  <li>
+    <h3>One of the biggest threats to global health.</h3>
+  </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+  <img class="img-fluid" style="margin-top: 2.5%; width: 45%; height: auto;"
+    src="{{ url_for('static', filename='number_of_beta_lactamases.jpg') }}" alt="...">
+  <br>
+  <img class="img-fluid" style="margin-top: 2.5%; width: 45%; height: auto;"
+    src="{{ url_for('static', filename='antibiotics_per_year.png') }}" alt="...">
+</div>
+{% endblock right %}

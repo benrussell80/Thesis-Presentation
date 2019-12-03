@@ -1,0 +1,28 @@
+{% extends 'left_right_66.html' %}
+
+{% set slide_title = 'Maximal Chord-Arc Ratio (CAR)' %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+  <li>
+    <h3>Ratio between longest distance between two points on track and total path length.</h3>
+  </li>
+  <li>
+    <h3>Quantification of tumbling events.</h3>
+  </li>
+  <li>
+    <h3>0: high number of tumbling events</h3>
+  </li>
+  <li>
+    <h3>1: low number of tumbling events</h3>
+  </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+  <img class="img-fluid" style="margin-top: 0%; width: 60%; height: auto; transform: rotate(90deg);"
+    src="{{ url_for('static', filename='CAR-1.png') }}" alt="...">
+</div>
+{% endblock right %}

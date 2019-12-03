@@ -1,0 +1,30 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Swimming Assay - Selected Track Results'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 15%;">
+    <li>
+        <h3>"Firework" plot</h3>
+    </li>
+    <li>
+        <h3>Circles show 50<sup>th</sup> and 75<sup>th</sup> percentile cells' displacements.</h3>
+    </li>
+    <li>
+        <h3>Control values stay mostly constant.</h3>
+    </li>
+    <li>
+        <h3>Displacement decreases after addition of silver.</h3>
+    </li>
+    <li>
+        <h3>Steadily returns to control-like values.</h3>
+    </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+    <img class="img-fluid" style="margin-top: 5%; width: 90%; height: auto;" src="{{ url_for('static', filename='firework_grid_plot_2.png') }}" alt="...">
+</div>
+{% endblock right %}

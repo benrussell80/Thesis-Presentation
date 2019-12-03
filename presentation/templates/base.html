@@ -4,10 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thesis Presentation</title>
+  <title>Thesis Presentation{% if slide_number != 0 %} - {{ slide_number }}{% endif %}</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <script src="https://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.js"></script>
+  <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.4.0.min.js"></script>
+  <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-1.4.0.min.js"></script>
 </head>
 
 <body>
@@ -25,10 +29,10 @@
       <nav aria-label="Page navigation example">
         <ul class="pagination">
           <li class="page-item">
-            <a class="page-link text-light bg-dark"
+            <a id="previous-button" class="page-link text-light bg-dark"
               href="{{ url_for('slides.slide_number', number=[slide_number-1, 0] | max) }}">Previous</a> </li>
-              <li class="page-item">
-            <a class="page-link text-light bg-dark"
+          <li class="page-item">
+            <a id="next-button" class="page-link text-light bg-dark"
               href="{{ url_for('slides.slide_number', number=[slide_number+1, number_of_slides] | min) }}">Next</a>
           </li>
         </ul>
@@ -37,5 +41,15 @@
     {% endblock content %}
   </div>
 </body>
+
+<script>
+  document.onkeydown = event => {
+    if (event.key == 'ArrowLeft'){
+      document.getElementById('previous-button').click();
+    } else if (event.key == 'ArrowRight'){
+      document.getElementById('next-button').click();
+    }
+  };
+</script>
 
 </html>

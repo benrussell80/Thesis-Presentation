@@ -1,0 +1,31 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Silver as an Antimicrobial' %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+    <li>
+        <h3>Silver was used for millennia to prevent infection.</h3>
+    </li>
+    <li>
+        <h3>Antimicrobial due to release of silver ions.</h3>
+    </li>
+    <li>
+        <h3>Silver nanoparticles show enhanced effects.</h3>
+    </li>
+    <li>
+        <h3>Possible alternative to antibiotics.</h3>
+    </li>
+    <li>
+        <h3>Already seeing use in consumer products.</h3>
+    </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+    <img class="img-fluid" style="margin-top: 10%; width: 65%; height: auto;"
+        src="{{ url_for('static', filename='silver_socks.jpg') }}" alt="...">
+</div>
+{% endblock right %}

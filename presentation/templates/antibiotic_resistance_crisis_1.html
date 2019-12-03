@@ -1,0 +1,25 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'The Antibiotic Resistance Crisis - Discovery' %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+  <li>
+    <h3>Alexander Fleming discovered penicillin in 1928.</h3>
+  </li>
+  <li>
+    <h3>Deaths due to infectious diseases decreased.</h3>
+  </li>
+  <li>
+    <h3>Lead to the golden age of antibiotic discovery.</h3>
+  </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+  <img class="img-fluid" style="margin-top: 10%; width: 70%; height: auto;"
+    src="{{ url_for('static', filename='infections_per_year.gif') }}" alt="Infections per year">
+</div>
+{% endblock right %}

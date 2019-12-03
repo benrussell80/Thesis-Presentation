@@ -1,0 +1,28 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Tethering Assay - Predict Run/Tumble States with HMMs'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+  <li>
+    <h3>States switch freely before adding silver.</h3>
+  </li>
+  <li>
+    <h3>After silver, tumbling state is more frequent.</h3>
+  </li>
+  <li>
+    <h3>Motor is not able to switch out of tumbling state.</h3>
+  </li>
+  <li>
+    <h3>Suggests that silver ions alter the rate parameters of the pre-silver HMM.</h3>
+  </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+  <img class="img-fluid" style="margin-top: 5%; width: 90%; height: auto;"
+    src="{{ url_for('static', filename='predictions-1.png') }}" alt="...">
+</div>
+{% endblock right %}

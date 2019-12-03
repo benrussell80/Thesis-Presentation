@@ -1,0 +1,24 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Swimming Assay - Selected Track Results' | safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 40%;">
+    <li>
+        <h3>Trajectories of selected tracks.</h3>
+    </li>
+    <li>
+        <h3>Silver shortens the trajectories of some cells.</h3>
+    </li>
+    <li>
+        <h3>Lengths of trajectories steadily increase.</h3>
+    </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+    <img class="img-fluid" style="margin-top: 5%; width: 90%; height: auto;" src="{{ url_for('static', filename='tracks_grid_plots-1.png') }}" alt="...">
+</div>
+{% endblock right %}

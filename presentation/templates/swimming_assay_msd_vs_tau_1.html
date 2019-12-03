@@ -1,0 +1,25 @@
+{% extends 'left_right_66.html' %}
+
+{% set slide_title = 'Swimming Assay - MSD vs &tau;'|safe %}
+
+{% block left %}
+<div class="text-center">
+  <h3 style="margin-top: 40%; width: 100%; height: auto;">
+    MSD = 4D&tau;<sup>&alpha;</sup>
+  </h3>
+</div>
+{% endblock left %}
+
+{% block right %}
+<ul class='h3' style="margin-top: 35%;">
+  <li>
+    <h3>&alpha; > 1 : super-diffusion</h3>
+  </li>
+  <li>
+    <h3>&alpha; = 1 : diffusion (Brownian motion)</h3>
+  </li>
+  <li>
+    <h3>&alpha; < 1 : sub-diffusion</h3>
+  </li>
+</ul>
+{% endblock right %}

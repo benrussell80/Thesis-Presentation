@@ -1,0 +1,33 @@
+{% extends 'center.html' %}
+
+{% set slide_title = 'Swimming Assay - Selected Track Velocities'|safe %}
+{#
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+  <li>
+    <h3>Histograms of swimming velocity.</h3>
+  </li>
+  <li>
+    <h3>Decrease in swimming velocity caused by silver ions.</h3>
+  </li>
+  <li>
+    <h3>Cells gradually recover and regain a mode around 12 microns/sec.</h3>
+  </li>
+</ul>
+
+{% endblock left %}
+#}
+{% block center %}
+<div class="container h-100">
+  <div class="row h-100" style="display: flex; align-items: center; justify-content: center;">
+    <div id="velocity-plot"></div>
+  </div>
+</div>
+<script>
+  fetch('/velocity-plot')
+    .then(response => {
+      return response.json();
+    })
+    .then(item => Bokeh.embed.embed_item(item, "velocity-plot"))
+</script>
+{% endblock center %}

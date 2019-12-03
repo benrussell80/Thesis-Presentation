@@ -1,0 +1,27 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Swimming Assay - MSD vs &tau;'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+  <li>
+    <h3>Swimming trajectories MSD vs &tau; fit to Einstein relation.</h3>
+  </li>
+  <li>
+    <h3>Lower rise suggests lower diffusion coefficient.</h3>
+  </li>
+  <li>
+    <h3>Diffusivity constant (&alpha;) remains greater than 1.</h3>
+  </li>
+  <li>
+    <h3>Cells are, for the most part, not killed.</h3>
+  </li>
+</ul>
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+  <img class="img-fluid" style="margin-top: 5%; width: 90%; height: auto;"
+    src="{{ url_for('static', filename='MSD_linlin-1.png') }}" alt="...">
+</div>
+{% endblock right %}

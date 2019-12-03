@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% set left_cols = 6 %}
+
+{% block content %}
+<div class="row justify-content-center h-100">
+  <div class="col-md-{{ left_cols }} h-100">{% block left %}{% endblock left %}</div>
+  <div class="col-md-{{ 12 - left_cols }} h-100">{% block right %}{% endblock right %}</div>
+</div>
+{{ super() }}
+{% endblock content %}

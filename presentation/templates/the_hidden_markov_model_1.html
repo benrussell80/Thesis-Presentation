@@ -1,0 +1,19 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'The Hidden Markov Model'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+  <li>
+    <h3>Markov process.</h3>
+  </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+  <img class="img-fluid" style="margin-top: 10%; width: 80%; height: auto;"
+    src="{{ url_for('static', filename='transmat-graph-1.png') }}" alt="...">
+</div>
+{% endblock right %}

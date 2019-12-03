@@ -1,0 +1,31 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'Tethering Assay - The Gaussian HMM'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 10%;">
+  <li>
+    <h3>Gaussian HMMs were used in this work.</h3>
+  </li>
+  <li>
+    <h3>Emissions can have a range of continuous values (and can overlap).</h3>
+  </li>
+  <li>
+    <h3>Rotational velocity was used as the observable.</h3>
+  </li>
+  <li>
+    <h3>Run and tumble are the hidden states.</h3>
+  </li>
+  <li>
+    <h3>Gaussian HMMs were fit to the pre-silver data and used to predict the states of the post-silver data.</h3>
+  </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+  <img class="img-fluid" style="margin-top: 10%; width: 65%; height: auto;"
+    src="{{ url_for('static', filename='gaussian_emissions.png') }}" alt="...">
+</div>
+{% endblock right %}

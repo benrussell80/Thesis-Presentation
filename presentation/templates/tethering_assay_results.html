@@ -1,0 +1,20 @@
+{% extends 'left_right_66.html' %}
+
+{% set slide_title = 'Tethering Assay - Results'|safe %}
+
+{% block left %}
+<div style="margin-top: 10%;" class="text-center">
+  <h3>Pre 40&mu;M Ag<sup>+</sup></h3>
+  <img class="img-fluid" width="50%" src="{{ url_for('static', filename='pre_ag.gif') }}"
+    alt="...">
+</div>
+{% endblock left %}
+
+{% block right %}
+{% set left_cols = 6 %}
+<div style="margin-top: 10%;" class="text-center">
+  <h3>Post 40&mu;M Ag<sup>+</sup></h3>
+  <img class="img-fluid" width="50%" src="{{ url_for('static', filename='adding_ag.gif') }}"
+    alt="...">
+</div>
+{% endblock right %}

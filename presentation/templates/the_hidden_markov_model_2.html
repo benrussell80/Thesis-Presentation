@@ -1,0 +1,29 @@
+{% extends 'left_right.html' %}
+
+{% set slide_title = 'The Hidden Markov Model'|safe %}
+
+{% block left %}
+<ul class="h3" style="margin-top: 25%;">
+  <li>
+    <h3>Markov process.</h3>
+  </li>
+  <li>
+    <h3>In a hidden Markov model (HMM), the states are not directly observable.</h3>
+  </li>
+  <li>
+    <h3>Hidden states emit observables.</h3>
+  </li>
+  <li>
+    <h3>These observables can be used to predict the hidden states.
+    </h3>
+  </li>
+</ul>
+
+{% endblock left %}
+
+{% block right %}
+<div class="text-center">
+  <img class="img-fluid" style="margin-top: 10%; width: 80%; height: auto;"
+    src="{{ url_for('static', filename='transmat-graph-2-1.png') }}" alt="...">
+</div>
+{% endblock right %}
