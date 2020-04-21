@@ -2,6 +2,7 @@ import pandas as pd
 from bokeh.plotting import figure
 from bokeh.models import HoverTool, ColumnDataSource
 from bokeh.layouts import gridplot
+import os
 
 
 def errorbar(p, x, y, yerr, source, glyph='circle', glyph_kwargs=None, line_kwargs=None):
@@ -28,9 +29,9 @@ def errorbar(p, x, y, yerr, source, glyph='circle', glyph_kwargs=None, line_kwar
 def od_plot_generator():
     p = figure(plot_width=600, plot_height=450)
 
-    df_0 = pd.read_excel('~/Desktop/OD600_agg_values.xls', sheet_name='0uM_agg')
-    df_30 = pd.read_excel('~/Desktop/OD600_agg_values.xls', sheet_name='30uM_agg')
-    df_40 = pd.read_excel('~/Desktop/OD600_agg_values.xls', sheet_name='40uM_agg')
+    df_0 = pd.read_excel(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'OD600_agg_values.xls'), sheet_name='0uM_agg')
+    df_30 = pd.read_excel(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'OD600_agg_values.xls'), sheet_name='30uM_agg')
+    df_40 = pd.read_excel(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'OD600_agg_values.xls'), sheet_name='40uM_agg')
 
     errorbar(p, 'Time', 'mean', 'sem', df_0, glyph='circle',
             glyph_kwargs={'color': 'blue', 'size': 12, 'legend_label': '0uM', 'fill_alpha': 0, 'line_width': 3, 'name': '0'},
@@ -73,10 +74,10 @@ def od_plot_generator():
 
 
 def velocity_hists_generator():
-    mean_velocities_df = pd.read_csv('~/Desktop/mean_velocities_df.csv', header=None, names=['conc', 'hour', 'mean'])
-    sem_velocities_df = pd.read_csv('~/Desktop/sem_velocities_df.csv', header=None, names=['conc', 'hour', 'sem'])
-    freq_mean_df = pd.read_csv('~/Desktop/freq_mean_df.csv', header=0)
-    freq_sem_df = pd.read_csv('~/Desktop/freq_sem_df.csv', header=0)
+    mean_velocities_df = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'mean_velocities_df.csv'), header=None, names=['conc', 'hour', 'mean'])
+    sem_velocities_df = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'sem_velocities_df.csv'), header=None, names=['conc', 'hour', 'sem'])
+    freq_mean_df = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'freq_mean_df.csv'), header=0)
+    freq_sem_df = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'freq_sem_df.csv'), header=0)
     
     freq_mean_df_melted = pd.melt(freq_mean_df, id_vars=['conc', 'hour'], var_name='velocity', value_name='mean')
     freq_sem_df_melted = pd.melt(freq_sem_df, id_vars=['conc', 'hour'], var_name='velocity', value_name='sem')

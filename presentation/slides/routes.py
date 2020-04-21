@@ -68,8 +68,9 @@ def index():
 
 @slides.route('/slide/<int:number>')
 def slide_number(number):
-    number = max(number, 0)
-    return render_template(slide_mapper[number], slide_number=number, number_of_slides=len(slide_mapper))
+    number_of_slides = len(slide_mapper)
+    number = max(number % number_of_slides, 0)
+    return render_template(slide_mapper[number], slide_number=number, number_of_slides=number_of_slides)
 
 @slides.route('/od-plot')
 def od_plot():
